@@ -5,7 +5,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="width:400px; margin:0 auto;></div>
+    <div class="g-signin2" id="SignInButton" data-onsuccess="onSignIn" data-theme="dark" style="width:400px; margin:0 auto;></div>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -18,6 +18,7 @@
         console.log("Email: " + profile.getEmail());
 
       }
+      document.getElementById("SignInButton").click();  
     </script>
   </body>
 </html>
