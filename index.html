@@ -7,7 +7,8 @@
   </head>
   <body>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <div id="my-signin2"></div>                                                                                     
+    <div id="my-signin2"></div>
+    <button onclick="customButtonSignIn"></button>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -33,6 +34,11 @@
         'onfailure': onFailure
       });
     }
+    function customButtonSignIn()
+      {
+      gapi.auth2.getAuthInstance().signIn().then(function()
+                                                 {alert("sign in clicked")});
+      }
 
     </script>
                            
