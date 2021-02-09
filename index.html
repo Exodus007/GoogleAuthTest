@@ -6,8 +6,7 @@
   </head>
   <body>
     <div class="g-signin2" id="SignInButton" data-onsuccess="onSignIn" data-theme="dark" style="width:400px; margin:0 auto;></div>
-     $("#SignInButton").click(function() {
-    alert("I was clicked.");                                                                                            
+                                                                                           
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -20,8 +19,10 @@
         console.log("Email: " + profile.getEmail());
 
       }
-
-});
+function myFunction() {
+  document.getElementById("SignInButton").click(); // Click on the checkbox
+}
+                                        myFunction();
     </script>
                                
   </body>
