@@ -28,10 +28,10 @@
       }
       function googlAlreadySignedIn()
       {
-         gapi.auth2.getAuthInstance().isSignedIn.listen(listener);
-        if(listener)
+         var a=gapi.auth2.getAuthInstance().isSignedIn.get();
+        if(a)
         {
-          alert("already signed In");
+          alert("already signed In baby");
         }else
         {
           alert("Not signed in yet")'
